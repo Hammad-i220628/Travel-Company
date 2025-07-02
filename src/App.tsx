@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -9,8 +9,28 @@ import Footer from './components/Footer';
 import FloatingButtons from './components/FloatingButtons';
 
 function App() {
+  const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem('theme');
+      if (stored) return stored === 'dark';
+      // Default to dark mode if no preference is set
+      return true;
+    }
+    return true;
+  });
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [darkMode]);
+
   return (
-    <div className="min-h-screen bg-white font-inter overflow-x-hidden">
+    <div className={`min-h-screen bg-white dark:bg-gray-950 font-inter overflow-x-hidden`}>
       {/* Enhanced Dynamic background pattern */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
         {/* Primary floating elements */}
@@ -38,7 +58,7 @@ function App() {
       <CTABanner />
       <Contact />
       <Footer />
-      <FloatingButtons />
+      <FloatingButtons onToggleDarkMode={() => setDarkMode((d) => !d)} darkMode={darkMode} />
     </div>
   );
 }

@@ -61,23 +61,23 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="py-16 md:py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
+    <section id="services" className="py-16 md:py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden dark:from-gray-900 dark:via-gray-950 dark:to-blue-950">
       {/* Background decorations */}
-      <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-full blur-2xl opacity-50 animate-pulse"></div>
-      <div className="absolute bottom-20 left-10 w-24 h-24 bg-gradient-to-br from-secondary-100 to-primary-100 rounded-full blur-xl opacity-40 animate-float"></div>
+      <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-full blur-2xl opacity-50 animate-pulse dark:from-primary-900 dark:to-secondary-900"></div>
+      <div className="absolute bottom-20 left-10 w-24 h-24 bg-gradient-to-br from-secondary-100 to-primary-100 rounded-full blur-xl opacity-40 animate-float dark:from-secondary-900 dark:to-primary-900"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Enhanced Section Header */}
         <div className="text-center space-y-6 mb-20">
           <div className="inline-block">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-heading">
-              <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">Our </span>
-              <span className="bg-gradient-to-r from-primary-500 to-primary-600 bg-clip-text text-transparent">Professional</span>
-              <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent"> Services</span>
+              <span className="bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-200 bg-clip-text text-transparent">Our </span>
+              <span className="bg-gradient-to-r from-primary-500 to-primary-600 dark:from-primary-300 dark:to-primary-400 bg-clip-text text-transparent">Professional</span>
+              <span className="bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-200 bg-clip-text text-transparent"> Services</span>
             </h2>
-            <div className="h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-primary-500 rounded-full mt-4 animate-gradient-shift bg-[length:200%_200%]"></div>
+            <div className="h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-primary-500 rounded-full mt-4 animate-gradient-shift bg-[length:200%_200%] dark:from-primary-300 dark:via-secondary-300 dark:to-primary-300"></div>
           </div>
-          <p className="text-lg md:text-xl text-gray-600 leading-body max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-body max-w-3xl mx-auto">
             Comprehensive moving and packing solutions tailored to meet all your relocation needs
           </p>
         </div>
@@ -89,7 +89,7 @@ const Services: React.FC = () => {
             return (
               <div 
                 key={index} 
-                className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 border border-gray-100 hover:border-primary-200 relative overflow-hidden"
+                className="group bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 border border-gray-100 dark:border-gray-800 hover:border-primary-200 dark:hover:border-primary-400 relative overflow-hidden"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Gradient overlay on hover */}
@@ -97,21 +97,21 @@ const Services: React.FC = () => {
                 
                 <div className="relative z-10">
                   <div className="flex items-center space-x-4 mb-6">
-                    <div className={`bg-gradient-to-br ${service.gradient} p-4 rounded-xl group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                    <div className={`bg-gradient-to-br ${service.gradient} dark:from-primary-400 dark:to-primary-500 p-4 rounded-xl group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                       <IconComponent className="h-6 w-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900 leading-heading group-hover:text-primary-600 transition-colors duration-300">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white leading-heading group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
                       {service.title}
                     </h3>
                   </div>
-                  <p className="text-gray-600 leading-body mb-6">
+                  <p className="text-gray-600 dark:text-gray-300 leading-body mb-6">
                     {service.description}
                   </p>
                   <ul className="space-y-3">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-3 text-sm text-gray-700">
-                        <div className={`w-2 h-2 bg-gradient-to-r ${service.gradient} rounded-full animate-pulse`}></div>
-                        <span className="group-hover:text-gray-900 transition-colors duration-300">{feature}</span>
+                      <li key={featureIndex} className="flex items-center space-x-3 text-sm text-gray-700 dark:text-gray-200">
+                        <div className={`w-2 h-2 bg-gradient-to-r ${service.gradient} dark:from-primary-400 dark:to-primary-500 rounded-full animate-pulse`}></div>
+                        <span className="group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -128,20 +128,20 @@ const Services: React.FC = () => {
             return (
               <div 
                 key={index} 
-                className="group bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-l-4 border-secondary-500 hover:border-primary-500 relative overflow-hidden"
+                className="group bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-l-4 border-secondary-500 dark:border-secondary-400 hover:border-primary-500 dark:hover:border-primary-400 relative overflow-hidden"
               >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-100 to-secondary-100 dark:from-primary-900 dark:to-secondary-900 rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
                 
                 <div className="relative z-10">
                   <div className="flex items-center space-x-4 mb-4">
-                    <div className="bg-gradient-to-br from-secondary-500 to-secondary-600 group-hover:from-primary-500 group-hover:to-primary-600 p-4 rounded-xl transition-all duration-300 shadow-lg group-hover:scale-110">
+                    <div className="bg-gradient-to-br from-secondary-500 to-secondary-600 dark:from-secondary-400 dark:to-secondary-500 group-hover:from-primary-500 group-hover:to-primary-600 p-4 rounded-xl transition-all duration-300 shadow-lg group-hover:scale-110">
                       <IconComponent className="h-6 w-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900 leading-heading group-hover:text-primary-600 transition-colors duration-300">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white leading-heading group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
                       {service.title}
                     </h3>
                   </div>
-                  <p className="text-gray-600 leading-body group-hover:text-gray-700 transition-colors duration-300">
+                  <p className="text-gray-600 dark:text-gray-300 leading-body group-hover:text-gray-700 dark:group-hover:text-white transition-colors duration-300">
                     {service.description}
                   </p>
                 </div>
@@ -152,11 +152,11 @@ const Services: React.FC = () => {
 
         {/* Enhanced CTA Section */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-primary-500 via-primary-600 to-secondary-500 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden shadow-2xl">
+          <div className="bg-gradient-to-r from-primary-500 via-primary-600 to-secondary-500 dark:from-primary-400 dark:via-primary-500 dark:to-secondary-400 rounded-3xl p-8 md:p-12 text-white dark:text-gray-900 relative overflow-hidden shadow-2xl">
             {/* Background pattern */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-white/5 to-transparent rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-white/5 to-transparent rounded-full blur-2xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent dark:from-gray-900/20 dark:to-transparent"></div>
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-white/5 to-transparent dark:from-gray-900/10 dark:to-transparent rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-white/5 to-transparent dark:from-gray-900/10 dark:to-transparent rounded-full blur-2xl"></div>
             
             <div className="relative z-10">
               <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-heading">
@@ -167,7 +167,7 @@ const Services: React.FC = () => {
               </p>
               <a
                 href="#contact"
-                className="inline-flex items-center bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1 hover:scale-105"
+                className="inline-flex items-center bg-white dark:bg-gray-900 text-primary-600 dark:text-primary-300 hover:bg-gray-100 dark:hover:bg-gray-800 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1 hover:scale-105"
               >
                 Get Custom Quote
               </a>
