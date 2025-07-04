@@ -47,15 +47,6 @@ A modern, responsive website for **Butt Movers & Packers**, a professional movin
 
 ---
 
-## 📍 Contact & Location
-
-- **📱 WhatsApp**: [+92 306 895 4966](https://wa.me/923068954966)
-- **📧 Email**: anasbutt678888@gmail.com
-- **📌 Address**: Opposite Bahria Town, Rawalpindi, Pakistan
-- **🗺️ Map**: Embedded Google Maps view for easy directions
-
----
-
 ## 🚧 Installation & Development
 
 ### 📦 Prerequisites
